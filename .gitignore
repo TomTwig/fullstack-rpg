@@ -1,0 +1,184 @@
+# ============================================================
+#  Mono-Repo .gitignore  –  Unity (game/) + NestJS (backend/)
+# ============================================================
+
+
+# ────────────────────────────────────────────────────────────
+#  UNITY  (Ordner: game/)
+# ────────────────────────────────────────────────────────────
+
+game/[Ll]ibrary/
+game/[Tt]emp/
+game/[Oo]bj/
+game/[Bb]uild/
+game/[Bb]uilds/
+game/[Ll]ogs/
+game/[Uu]ser[Ss]ettings/
+game/[Mm]emoryCaptures/
+game/[Rr]ecordings/
+game/.utmp/
+
+# Auto-generierte Projektdateien (IDE)
+game/*.csproj
+game/*.sln
+game/*.slnx
+game/*.suo
+game/*.user
+game/*.userprefs
+game/*.pidb
+game/*.booproj
+game/*.svd
+game/*.pdb
+game/*.mdb
+game/*.opendb
+game/*.VC.db
+game/ExportedObj/
+game/.consulo/
+game/.vs/
+game/.gradle/
+
+# Meta-Dateien zu generierten Dateien
+game/*.pidb.meta
+game/*.pdb.meta
+game/*.mdb.meta
+
+# Builds / Pakete
+game/*.apk
+game/*.aab
+game/*.unitypackage
+game/*.unitypackage.meta
+game/*.app
+
+# Logs & Crash-Reports
+game/*.log
+game/*.tmp
+game/sysinfo.txt
+game/mono_crash.*
+game/crashlytics-build.properties
+
+# Rider
+game/[Aa]ssets/Plugins/Editor/JetBrains*
+game/*.DotSettings.user
+
+# Addressables
+game/ServerData/
+game/[Aa]ssets/StreamingAssets/aa*
+game/[Aa]ssets/AddressableAssetsData/link.xml*
+game/[Aa]ssets/Addressables_Temp*
+game/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# Visual Scripting
+game/[Aa]ssets/Unity.VisualScripting.Generated/
+
+# TestRunner
+game/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+game/[Aa]ssets/[Ss]ceneDependencyCache*
+game/InitTestScene*.unity*
+
+# Blender
+game/*.blend1
+game/*.blend1.meta
+
+
+# ────────────────────────────────────────────────────────────
+#  NESTJS / NODE  (Ordner: backend/)
+# ────────────────────────────────────────────────────────────
+
+backend/node_modules/
+backend/dist/
+backend/.build/
+
+# TypeScript
+backend/*.tsbuildinfo
+
+# Logs
+backend/logs/
+backend/*.log
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# Coverage
+backend/coverage/
+backend/*.lcov
+backend/.nyc_output/
+
+# Umgebungsvariablen  ← .env.example bleibt im Repo!
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Prisma
+backend/prisma/*.db
+backend/prisma/*.db-journal
+
+# Cache / Build-Tools
+backend/.npm/
+backend/.eslintcache
+backend/.stylelintcache
+backend/.cache/
+backend/.parcel-cache/
+backend/.next/
+backend/.nuxt/
+backend/.output/
+backend/.svelte-kit/
+backend/.serverless/
+backend/.fusebox/
+backend/.dynamodb/
+backend/.firebase/
+backend/.vite/
+backend/vite.config.*.timestamp-*
+
+# Yarn v3
+backend/.pnp.*
+backend/.yarn/*
+!backend/.yarn/patches
+!backend/.yarn/plugins
+!backend/.yarn/releases
+!backend/.yarn/sdks
+!backend/.yarn/versions
+backend/.pnpm-store/
+
+# Sonstige
+backend/*.tgz
+backend/.yarn-integrity
+backend/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+backend/pids/
+backend/*.pid
+backend/*.seed
+backend/*.pid.lock
+backend/.tern-port
+
+
+# ────────────────────────────────────────────────────────────
+#  OS & EDITOR  (global, Repo-Wurzel)
+# ────────────────────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# VS Code (persönliche Einstellungen – geteilte Configs ok)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/*.code-workspace
+
+# JetBrains / Rider
+.idea/
+*.iml
+
+# Logs allgemein
+*.log
