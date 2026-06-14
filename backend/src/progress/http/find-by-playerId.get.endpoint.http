@@ -1,2 +1,2 @@
-GET http://localhost:3000/progress/?1
+GET http://localhost:3000/progress/player1
 Content-Type: application/json

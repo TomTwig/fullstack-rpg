@@ -5,7 +5,7 @@ export class PlayerProgress {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
   @Column({ unique: true })
-  playerId!: string;
+  playerName!: string;
   @Column({ default: 0 })
   xp!: number;
   @Column({ default: 1 })

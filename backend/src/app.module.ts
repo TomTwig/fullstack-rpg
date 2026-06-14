@@ -7,9 +7,10 @@ import { ProgressModule } from './progress/progress.module';
 
 @Module({
   imports: [
+    ProgressModule,
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule, ProgressModule],
+      imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',

@@ -3,7 +3,7 @@ import { IsNotEmpty, IsNumber, IsString, Min } from 'class-validator';
 export class SaveProgressDto {
   @IsNotEmpty()
   @IsString()
-  playerId!: string;
+  playerName!: string;
 
   @IsNumber()
   @Min(0)

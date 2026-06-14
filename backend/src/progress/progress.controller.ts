@@ -12,7 +12,7 @@ export class ProgressController {
   }
 
   @Get(':playerId')
-  findByPlayerId(@Param('playerId') id: string) {
+  findByPlayerName(@Param('playerName') id: string) {
     return this.progressService.findByPlayerId(id);
   }
 }

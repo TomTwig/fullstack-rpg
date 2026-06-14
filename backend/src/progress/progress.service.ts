@@ -13,7 +13,7 @@ export class ProgressService {
 
   async save(dto: SaveProgressDto): Promise<PlayerProgress | null> {
     const exist = await this.repo.findOne({
-      where: { playerId: dto.playerId },
+      where: { playerName: dto.playerName },
     });
 
     if (exist) {
@@ -26,16 +26,16 @@ export class ProgressService {
     return this.repo.save(newEntry);
   }
 
-  async findByPlayerId(playerId: string): Promise<PlayerProgress | null> {
+  async findByPlayerId(playerName: string): Promise<PlayerProgress | null> {
     const exist = await this.repo.findOne({
-      where: { playerId },
+      where: { playerName },
     });
 
     if (exist) {
       return exist;
     } else {
       throw new NotFoundException(
-        `Kein Fortschritt für den Spieler ${playerId} gefunden `,
+        `Kein Fortschritt für den Spieler ${playerName} gefunden `,
       );
     }
   }
