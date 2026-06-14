@@ -2,7 +2,7 @@ POST http://localhost:3000/progress/save
 Content-Type: application/json
 
 {
-    "playerId":1,
+    "playerId":"player1",
     "xp": 250,
     "level":3
 }
